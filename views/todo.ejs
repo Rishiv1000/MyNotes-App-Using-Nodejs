@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY NOTES</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="upper">
+        <h1 style="margin:5px;color: black;">DATE = <%= date %></h1>
+         <h1 style="margin:5px">MY NOTES</h1>
+         <form action="/" method="post">
+                  <input id="fill" type="text" name="todo_input" placeholder="Enter.....">
+                  <button class="btn" >ADD</button>
+        </form>
+    </div>
+    
+    <ul id="list">
+        <li> <input type="checkbox">Wake up</li> 
+        <% for(let i =0 ; i< my_list.length ; i++){ %>
+           <li> <input type="checkbox"><%= my_list[i] %></li> 
+        <% } %>
+    </ul>
+
+  
+</body>
+</html>
